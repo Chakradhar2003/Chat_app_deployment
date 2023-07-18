@@ -14,7 +14,11 @@ var cors = require('cors');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware')
 const path = require("path");
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: "*",
+    }
+));
 
 app.use(express.json())
 
